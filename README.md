@@ -1,2 +1,2 @@
-# organicAF.github.io
+# OrganicAF.github.io
 OrganicAF home
