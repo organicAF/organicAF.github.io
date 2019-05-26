@@ -1,0 +1,155 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 65%;
+  background-color: #0f4242;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgrey;
+}
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+header .overlay h1 {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  transform: translate(-50%, 20%);
+  z-index: 4;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 8vw;
+  color: #4242f9;
+  mix-blend-mode: screen;
+  opacity: .78;
+}
+@media (max-width: 768px) {
+  header .overlay h1 {
+    font-size: 4rem;
+  }
+}
+@media (max-height: 500px) {
+  header .overlay h1 {
+    font-size: 6rem;
+  }
+}
+header .overlay h1 span {
+  display: block;
+  letter-spacing: 3px;
+  font-size: 2vw;
+  color: #077c7c;
+}
+@media (max-width: 768px) {
+  header .overlay h1 span {
+    font-size: 1.25rem;
+  }
+}
+header .parallax {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+header .parallax div {
+  position: absolute;
+  bottom: -13px;
+  left: -13px;
+  width: calc(100% + (13px * 2));
+  height: calc(100% + (13px * 2));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform 2000ms ease;
+}
+@media (max-height: 600px) {
+  header .parallax div {
+    background-size: 100%;
+  }
+}
+header .parallax .one {
+  background-image: url("https://tornis.robbowen.digital/img/mist.png");
+  z-index: 2;
+  animation: side 50s quadratic infinite;
+}
+header .parallax .two {
+  background-image: url("https://tornis.robbowen.digital/img/tree_top.png");
+  z-index: 3;
+}
+header .parallax .three {
+  background-image: url("https://tornis.robbowen.digital/img/mist.png");
+  z-index: 4;
+  animation: side 30s linear 15s infinite;
+}
+header .parallax .four {
+  background-image: url("https://tornis.robbowen.digital/img/tree_mid.png");
+  z-index: 2;
+}
+header .parallax .five {
+  background-image: url("https://tornis.robbowen.digital/img/tree_base.jpg");
+  z-index: 2;
+}
+
+@keyframes side {
+  20%, 60%, 100% {
+    transform: translateX(13px);
+  }
+  40%, 80% {
+    transform: translateX(-13px);
+  }
+}
+main {
+  position: relative;
+  margin-bottom: 15vh;
+  padding: 2em 4em;
+  min-height: 85vh;
+  background-color: #0f4242;
+  font-family: "Georgia";
+}
+main .container {
+  position: relative;
+  z-index: 2;
+  font-size: 1rem;
+  color: #42f4f4;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: flex;
+  min-height: 15vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: #2af3f3;
+  background-color: #0a2d2d;
+}
+footer a {
+  padding-bottom: .25em;
+  text-decoration: none;
+  border-bottom: 1px dashed #4242f9;
+  color: #7373fb;
+}
